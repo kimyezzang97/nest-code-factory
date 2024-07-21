@@ -44,7 +44,7 @@ export interface PostModel {
     }
   ]
 
-@Injectable()
+@Injectable() // 주입할 수 있다.
 export class PostsService {
     getAllPosts(){
         return posts;
