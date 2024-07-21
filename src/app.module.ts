@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PostsModule } from './posts/posts.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { PostModel } from './posts/entities/posts.entity';
+import { PostsModel } from './posts/entities/posts.entity';
 
 @Module({
   imports: [PostsModule,
@@ -15,7 +15,7 @@ import { PostModel } from './posts/entities/posts.entity';
       username: 'postgres',
       password: 'postgres',
       database: 'postgres',
-      entities: [PostModel],
+      entities: [PostsModel],
       synchronize: true, // 개발환경 : true, 운영 : false 
     }),
   ],
